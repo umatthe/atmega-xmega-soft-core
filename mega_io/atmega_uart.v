@@ -408,7 +408,7 @@ begin
 				else
 				begin
 					rx_prescaller_cnt <= rx_prescaller_value_int - 1;
-					if(rx_sample_cnt < 4'd8)
+					if(rx_sample_cnt < 4'd7)
 					begin
 						rx_sample_cnt <= rx_sample_cnt + 1;
 					end
@@ -445,7 +445,7 @@ begin
 							begin // Check for low level on RX pin.
 								rx_pin_state_0_cnt <= 3'h0;
 								rx_pin_state_1_cnt <= 3'h0;
-								rx_sample_cnt <= 4'h2;
+								rx_sample_cnt <= 4'h1;
 								rx_state <= 2'h1;
 							end
 						end
